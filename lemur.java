@@ -39,5 +39,9 @@ public class lemur extends Actor
             punt = punt + 1;
             getWorld().showText("Puntuacion: " + punt, 80, 35);
         }
+        if (punt == 18) {
+            getWorld().showText("Has ganado!!!", 300, 200);
+            Greenfoot.stop();
+        }
     }
 }

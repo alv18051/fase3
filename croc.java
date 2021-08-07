@@ -14,7 +14,9 @@ public class croc extends Actor
      */
     public void act()
     {
+        GreenfootSound bgm =  new  GreenfootSound("bgm.mp3");
         move(4);
+        bgm.playLoop();
         if (Greenfoot.getRandomNumber(100) < 10) {
             turn(Greenfoot.getRandomNumber(90) - 45);
             
@@ -36,6 +38,7 @@ public class croc extends Actor
         if (isTouching(lemur.class)) {
             removeTouching(lemur.class);
             getWorld().showText("Game Over", 300, 200);
+            Greenfoot.stop();
         }
     }
 }

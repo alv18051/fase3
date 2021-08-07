@@ -46,6 +46,12 @@
                         <call expression="getWorld().showText(&quot;Puntuacion: &quot;+punt,80,35)" expression-java="getWorld().showText(&quot;Puntuacion: &quot; + punt, 80, 35)" enable="true"/>
                     </ifStatements>
                 </if>
+                <if condition="punt==18" condition-java="punt == 18" enable="true">
+                    <ifStatements>
+                        <call expression="getWorld().showText(&quot;Has ganado!!!&quot;,300,200)" expression-java="getWorld().showText(&quot;Has ganado!!!&quot;, 300, 200)" enable="true"/>
+                        <call expression="Greenfoot.stop()" expression-java="Greenfoot.stop()" enable="true"/>
+                    </ifStatements>
+                </if>
             </body>
         </method>
     </methods>

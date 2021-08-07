@@ -14,7 +14,9 @@
             <params/>
             <throws/>
             <body>
+                <variable type="GreenfootSound" type-java="GreenfootSound" name="bgm" value="new GreenfootSound(&quot;bgm.mp3&quot;)" value-java=" new GreenfootSound(&quot;bgm.mp3&quot;)" enable="true"/>
                 <call expression="move(4)" expression-java="move(4)" enable="true"/>
+                <call expression="bgm.playLoop()" expression-java="bgm.playLoop()" enable="true"/>
                 <if condition="Greenfoot.getRandomNumber(100)&lt;10" condition-java="Greenfoot.getRandomNumber(100) &lt; 10" enable="true">
                     <ifStatements>
                         <call expression="turn(Greenfoot.getRandomNumber(90)-45)" expression-java="turn(Greenfoot.getRandomNumber(90) - 45)" enable="true"/>
@@ -43,6 +45,7 @@
                     <ifStatements>
                         <call expression="removeTouching(lemur.class)" expression-java="removeTouching(lemur.class)" enable="true"/>
                         <call expression="getWorld().showText(&quot;Game Over&quot;,300,200)" expression-java="getWorld().showText(&quot;Game Over&quot;, 300, 200)" enable="true"/>
+                        <call expression="Greenfoot.stop()" expression-java="Greenfoot.stop()" enable="true"/>
                     </ifStatements>
                 </if>
             </body>
