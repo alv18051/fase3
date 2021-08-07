@@ -16,6 +16,23 @@
             <body>
                 <call expression="preparar()" expression-java="preparar()" enable="true"/>
                 <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
             </body>
         </constructor>
     </constructors>
@@ -24,7 +41,10 @@
             <javadoc xml:space="preserve"/>
             <params/>
             <throws/>
-            <body/>
+            <body>
+                <variable type="bug" type-java="bug" name="b" value="new bug()" value-java=" new bug()" enable="true"/>
+                <call expression="addObject(b,Greenfoot.getRandomNumber(getWidth()-1),Greenfoot.getRandomNumber(getHeight()-1))" expression-java="addObject(b, Greenfoot.getRandomNumber(getWidth() - 1), Greenfoot.getRandomNumber(getHeight() - 1))" enable="true"/>
+            </body>
         </method>
         <method access="public" type="void" type-java="void" name="preparar" enable="true">
             <javadoc xml:space="preserve"/>
@@ -36,10 +56,7 @@
                 <blank/>
                 <variable type="croc" type-java="croc" name="c" value="new croc()" value-java=" new croc()" enable="true"/>
                 <call expression="addObject(c,500,35)" expression-java="addObject(c, 500, 35)" enable="true"/>
-                <variable type="bug" type-java="bug" name="b" value="new bug()" value-java=" new bug()" enable="true"/>
-                <variable type="int" type-java="int" name="x" value="Greenfoot.getRandomNumber(getWidth()-1)" value-java="Greenfoot.getRandomNumber(getWidth() - 1)" enable="true"/>
-                <variable type="int" type-java="int" name="y" value="Greenfoot.getRandomNumber(getHeight()-1)" value-java="Greenfoot.getRandomNumber(getHeight() - 1)" enable="true"/>
-                <call expression="addObject(b,x,y)" expression-java="addObject(b, x, y)" enable="true"/>
+                <blank/>
             </body>
         </method>
     </methods>

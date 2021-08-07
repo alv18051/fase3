@@ -17,6 +17,23 @@ public class MyWorld extends World
         super(600, 400, 1);
         preparar();
         generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
+        generar();
     }
 
     /**
@@ -24,6 +41,8 @@ public class MyWorld extends World
      */
     public void generar()
     {
+        bug b =  new  bug();
+        addObject(b, Greenfoot.getRandomNumber(getWidth() - 1), Greenfoot.getRandomNumber(getHeight() - 1));
     }
 
     /**
@@ -36,9 +55,6 @@ public class MyWorld extends World
         
         croc c =  new  croc();
         addObject(c, 500, 35);
-        bug b =  new  bug();
-        int x = Greenfoot.getRandomNumber(getWidth() - 1);
-        int y = Greenfoot.getRandomNumber(getHeight() - 1);
-        addObject(b, x, y);
+        
     }
 }
