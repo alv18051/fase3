@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="croc" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the croc wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="move(4)" expression-java="move(4)" enable="true"/>
+                <if condition="Greenfoot.getRandomNumber(100)&lt;10" condition-java="Greenfoot.getRandomNumber(100) &lt; 10" enable="true">
+                    <ifStatements>
+                        <call expression="turn(Greenfoot.getRandomNumber(90)-45)" expression-java="turn(Greenfoot.getRandomNumber(90) - 45)" enable="true"/>
+                        <blank/>
+                    </ifStatements>
+                </if>
+                <if condition="getX()&lt;=5||getX()&gt;=getWorld().getWidth()-5" condition-java="getX() &lt;= 5 || getX() &gt;= getWorld().getWidth() - 5" enable="true">
+                    <ifStatements>
+                        <call expression="turn(180)" expression-java="turn(180)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="getY()&lt;=5||getY()&gt;=getWorld().getWidth()-5" condition-java="getY() &lt;= 5 || getY() &gt;= getWorld().getWidth() - 5" enable="true">
+                    <ifStatements>
+                        <call expression="turn(180)" expression-java="turn(180)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <call expression="eatLemur()" expression-java="eatLemur()" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="eatLemur" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="isTouching(lemur.class)" condition-java="isTouching(lemur.class)" enable="true">
+                    <ifStatements>
+                        <call expression="removeTouching(lemur.class)" expression-java="removeTouching(lemur.class)" enable="true"/>
+                        <call expression="getWorld().showText(&quot;Game Over&quot;,300,200)" expression-java="getWorld().showText(&quot;Game Over&quot;, 300, 200)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="MyWorld" extends="World" extends-java="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Constructor for objects of class MyWorld.</javadoc>
+            <params/>
+            <throws/>
+            <delegate target="super" params="600,400,1" params-java="600, 400, 1"/>
+            <body>
+                <call expression="preparar()" expression-java="preparar()" enable="true"/>
+                <call expression="generar()" expression-java="generar()" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="generar" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+        <method access="public" type="void" type-java="void" name="preparar" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="lemur" type-java="lemur" name="l" value="new lemur()" value-java=" new lemur()" enable="true"/>
+                <call expression="addObject(l,50,350)" expression-java="addObject(l, 50, 350)" enable="true"/>
+                <blank/>
+                <variable type="croc" type-java="croc" name="c" value="new croc()" value-java=" new croc()" enable="true"/>
+                <call expression="addObject(c,500,35)" expression-java="addObject(c, 500, 35)" enable="true"/>
+                <variable type="bug" type-java="bug" name="b" value="new bug()" value-java=" new bug()" enable="true"/>
+                <variable type="int" type-java="int" name="x" value="Greenfoot.getRandomNumber(getWidth()-1)" value-java="Greenfoot.getRandomNumber(getWidth() - 1)" enable="true"/>
+                <variable type="int" type-java="int" name="y" value="Greenfoot.getRandomNumber(getHeight()-1)" value-java="Greenfoot.getRandomNumber(getHeight() - 1)" enable="true"/>
+                <call expression="addObject(b,x,y)" expression-java="addObject(b, x, y)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>
